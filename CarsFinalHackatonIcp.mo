@@ -18,7 +18,6 @@ actor {
   public type carId = Nat32;
   private stable var next : carId = 0;
   private stable var cars : Trie.Trie<carId, Car> = Trie.empty();
-  // private stable var favorites: Trie.Trie<carId, Bool> = Trie.empty();
 
   public func createCar(newCar : Car) : async ?Nat32 {
   let carWithStatus : Car = {
